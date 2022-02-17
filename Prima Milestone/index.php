@@ -63,16 +63,14 @@ $database = [
         </div>
     </header>
     <!-- main -->
-    <main class="container m-auto mt-5 mb-5">
+    <main class="container-fluid m-auto mb-5">
         <div class="row">
             <div class="col">
-                <section class="container">
-                    <div class="d-flex flex-wrap" >
-                        <div class="soundtrack text-center col-2 m-3">
-                            <?php 
-                            foreach ($database as $element){
-                            
-                            echo'<div class="containerImg m-auto p-3">
+                <section class="container d-flex">
+                        <?php 
+                        foreach ($database as $element){
+                        echo '<div class="soundtrack text-center col-2 m-3">
+                                <div class="containerImg m-auto p-3">
                                     <img src='.$element["poster"].'>   
                                 </div>'; 
                             echo '<h4 class="p-2 text-uppercase text-white">'
@@ -80,11 +78,10 @@ $database = [
                             echo '<div class="author">'
                             .$element["author"].'</div>';
                             echo '<div class="year">'
-                                 .$element["year"].'</div>';
-                            }
-                            ?>
-                        </div>
-                    </div>
+                                 .$element["year"].'</div>
+                        </div>';
+                        }
+                        ?>
                 </section>   
             </div>
         </div>
