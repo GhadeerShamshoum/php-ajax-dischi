@@ -1,0 +1,33 @@
+header{
+    background-color: #2E3A46;
+}
+main{
+    background-color: #1E2D3B;
+    height: 1000px;
+}
+.logo{
+    height: 70px;
+}
+.logo img{
+    height: 100%;
+}
+.soundtrack{
+    background-color: #2E3A46;
+}
+.containerImg{
+  height: 173px;
+  width: 80%;
+  overflow: hidden;
+}
+.containerImg img{
+    height: 100%;
+    object-fit: cover;
+}
+  
+h4{
+  color:#2E3A46;
+}
+.author,
+.year{
+  color:#6c6c6d;
+}
