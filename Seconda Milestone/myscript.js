@@ -1,16 +1,35 @@
 const app = new Vue({
     el: "#app",
     data: {
-        disks:[]
+        disks:[],
+        // newInput:'',
     },
     
-    created(){
-        this.getInfo();
-    },
+    // created(){
+    //     this.getInfo();
+    // },
+    // computed: {
+    //     filteredGenres(){
+    //         if(this.newInput == ''){
+    //             return this.disks
+    //         }
+    //         else{
+    //             return this.disks.filter( (item) => {
+    //                 return item.genre.includes(this.newInput)
+                    
+    //             });
+    //         }
+    //     },
+        
+    // },
     methods:{
+        // filterGenre(selected){
+        //     this.newInput = selected;
+        //     console.log(this.newInput)
+        // },
    
     getInfo(){
-        axios.get('http://localhost:8888/api.php', {
+        axios.get('http://localhost:8888/php-ajax-dischi/Seconda%20Milestone/api.php', {
         
       })
       .then((response) => {
@@ -21,6 +40,7 @@ const app = new Vue({
       .catch(function (error) {
         console.log(error);
       })
+      
      
      }
     }
