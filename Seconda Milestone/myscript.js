@@ -5,9 +5,10 @@ const app = new Vue({
         // newInput:'',
     },
     
-    // created(){
-    //     this.getInfo();
-    // },
+    created(){
+    this.getInfo();
+    
+    },
     // computed: {
     //     filteredGenres(){
     //         if(this.newInput == ''){
@@ -22,12 +23,12 @@ const app = new Vue({
     //     },
         
     // },
-    methods:{
-        // filterGenre(selected){
+    // filterGenre(selected){
         //     this.newInput = selected;
         //     console.log(this.newInput)
         // },
-   
+        
+    methods:{
     getInfo(){
         axios.get('http://localhost:8888/php-ajax-dischi/Seconda%20Milestone/api.php', {
         
@@ -42,7 +43,8 @@ const app = new Vue({
       })
       
      
-     }
     }
+    }
+    
     
 })
