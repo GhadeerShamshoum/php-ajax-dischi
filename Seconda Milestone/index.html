@@ -25,28 +25,27 @@ a php e li stamperà attraverso vue. -->
             </div>
             </div>
         </header>
-        <!-- <select @change="filterGenre(selected)" v-model="selected" -->
-         
-       <!-- class="inputSelect ms-4" name="genre" id="pet-select">
+        <select @change="filterGenre" v-model="newInput" 
+         class="inputSelect ms-4" name="genre" id="pet-select">
            <option value="">Please choose a genre</option>
            <option value="Rock">Rock</option>
            <option value="Jazz">Jazz</option>
            <option value="Pop">Pop</option>
            <option value="Metal">Metal</option>
-       </select> -->
+       </select>
         <!-- main -->
         <main class="container-fluid m-auto mb-5">
             <div class="row">
                 <div class="col">
-                    <section class="container d-flex">        
-                            <div v-for="(element, index) in disks" class="soundtrack text-center col-2 m-3" >
-                                    <div class="containerImg m-auto p-3">
-                                        <img :src="element.poster">   
-                                    </div>
-                                <h4 class="p-2 text-uppercase text-white">{{element.title}}</h4>
-                                <div class="author">{{element.author}}</div>
-                                <div class="year">{{element.year}}</div>
-                            </div>  
+                    <section class="container d-flex" >         
+                        <div v-for="(element, index) in disks" v-if="element.genre===newInput || newInput==''"  class="soundtrack text-center col-2 m-3">
+                            <div class="containerImg m-auto p-3" >
+                                <img :src="element.poster">   
+                            </div>
+                            <h4 class="p-2 text-uppercase text-white">{{element.title}}</h4>
+                            <div class="author">{{element.author}}</div>
+                            <div class="year">{{element.year}}</div>
+                        </div>      
                     </section>   
                 </div>
             </div>
